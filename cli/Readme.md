@@ -2,6 +2,10 @@
 
 The examples provide a view on how to use the cli in a pipeline.
 
+To run the script you will need to have the toolkit downloaded.
+The toolkit can be retrieved from [IBM Fix Central site](https://www-945.ibm.com/support/fixcentral/) or from the manager node.
+The procedure is described at the [knowledge center](https://www.ibm.com/support/knowledgecenter/SSMNED_v10/com.ibm.apic.toolkit.doc/tapim_cli_install.html).
+
 Before been able to run a script, you need to login in the management node. This can be done using the login script.
 
 The script provided are:
