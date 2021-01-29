@@ -1,0 +1,27 @@
+info:
+  version: 1.0.0
+  title: loopback-project
+  name: loopback-project
+gateways:
+  - datapower-api-gateway
+plans:
+  default-plan:
+    rate-limits:
+      default:
+        value: 100/1hour
+    title: Default Plan
+    description: Default Plan
+    approval: false
+apis:
+  loopback1.0.0:
+    $ref: loopback_1.0.0.yaml
+visibility:
+  view:
+    type: public
+    orgs: []
+    enabled: true
+  subscribe:
+    type: authenticated
+    orgs: []
+    enabled: true
+product: 1.0.0

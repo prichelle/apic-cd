@@ -1,0 +1,41 @@
+{
+    "product": "1.0.0",
+    "info": {
+        "name": "loopback-cicd-prd",
+        "title": "loopback cicd prd",
+        "version": "1.0.0"
+    },
+    "gateways": [
+        "datapower-api-gateway"
+    ],
+    "apis": {
+        "loopback-cicd": {
+            "name": "loopback-cicd:1.0.0"
+        }
+    },
+    "plans": {
+        "default": {
+            "title": "Default Plan",
+            "description": "Default Plan",
+            "approval": false,
+            "rate-limit": {
+                "hard-limit": true,
+                "value": "100/hour"
+            }
+        }
+    },
+    "visibility": {
+        "view": {
+            "enabled": true,
+            "type": "public",
+            "tags": [],
+            "orgs": []
+        },
+        "subscribe": {
+            "enabled": true,
+            "type": "authenticated",
+            "tags": [],
+            "orgs": []
+        }
+    }
+}

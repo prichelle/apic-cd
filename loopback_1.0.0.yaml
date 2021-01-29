@@ -1,0 +1,48 @@
+swagger: '2.0'
+info:
+  title: loopback
+  x-ibm-name: loopback
+  version: 1.0.0
+schemes:
+  - https
+basePath: /loopback
+security:
+  - clientID: []
+securityDefinitions:
+  clientID:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+x-ibm-configuration:
+  cors:
+    enabled: true
+  gateway: datapower-api-gateway
+  type: rest
+  phase: realized
+  enforced: true
+  testable: true
+  assembly:
+    execute:
+      - gatewayscript:
+          version: 2.0.0
+          title: gatewayscript
+          source: |-
+            var response = {"echo":"succeed"};
+            context.message.body.write(JSON.stringify(response));
+  properties:
+    target-url:
+      value: 'http://example.com/operation-name'
+      description: The URL of the target service
+      encoded: false
+  application-authentication:
+    certificate: false
+paths:
+  /echo:
+    get:
+      responses:
+        '200':
+          description: answer
+          schema:
+            type: object
+      consumes: []
+      produces: []
